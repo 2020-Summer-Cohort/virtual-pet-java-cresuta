@@ -1,7 +1,10 @@
 package virtual_pet;
 
 import java.util.Scanner;
-
+/*
+* Good first effort, I like where this is going, but can you fix up the issues I left in the comments and yet me know
+* when it's done before this Friday morning?
+ */
 public class VirtualPetApplication {
 
     public static void main(String[] args) {
@@ -36,6 +39,9 @@ public class VirtualPetApplication {
                 break;
             }
         }
+        /*
+        * This block of code is unreachable, you may want to consider how to incorporate it or leave it out.
+         */
         if (thomasTurtle.speed < 5) {
             System.out.println("\nTraining Thomas was too difficult.");
             System.out.println("Speed rating: " + thomasTurtle.speed);
