@@ -40,7 +40,8 @@ public class VirtualPetApplication {
             }
         }
         /*
-        * This block of code is unreachable, you may want to consider how to incorporate it or leave it out.
+        * This block of code is unreachable from line 46 to 49, the loop would only stop running if 'speed<5',
+        * you may want to consider how to incorporate it or leave it out.
          */
         if (thomasTurtle.speed < 5) {
             System.out.println("\nTraining Thomas was too difficult.");
