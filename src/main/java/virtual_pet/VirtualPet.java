@@ -8,7 +8,7 @@ public class VirtualPet {
     int speed;
     int happiness;
 
-    void tick() {
+    void receiveStatusUpdate() {
         System.out.println("\nThomas the Turtle");
         System.out.println("Thirst: " + thirst);
         System.out.println("Hunger: " + hunger);
@@ -17,38 +17,32 @@ public class VirtualPet {
         System.out.println("Happiness: " + happiness);
     }
 
-    void getInstructions(){
-        System.out.println("\nInstructions:");
-        System.out.println("1. Give some water to Thomas");
-        System.out.println("2. Give some food to Thomas");
-        System.out.println("3. Have Thomas go to bed");
-        System.out.println("4. Have Thomas run sprints");
-        System.out.println("5. Leave Thomas alone, he'd be happier if you did");
-        System.out.println("6. You no longer wish to help Thomas");
-    }
-
-    void getFood() {
-        hunger++;
-    }
-
-    void getWater() {
-        thirst++;
-    }
-
-    // getRest() will reset all ratings, EXCEPT for speed
-    void getRest() {
+    void eatFood() {
         hunger = 0;
+        thirst ++;
+    }
+
+    void drinkWater() {
         thirst = 0;
+        hunger ++;
+    }
+
+    // takeNap() will not effect the speed attribute.
+    void takeNap() {
+        hunger += 2;
+        thirst += 2;
         fatigue = 0;
         happiness = 0;
     }
 
-    void getSpeed() {
+    void runSprints() {
         speed++;
-        fatigue += 2;
+        fatigue += 4;
+        hunger += 2;
+        thirst += 2;
     }
 
-    void getHappy() {
+    void smile() {
         happiness += 3;
     }
 
